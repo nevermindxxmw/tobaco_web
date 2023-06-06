@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+  tobaco_web:
+    image: tobaco_web:latest
+    container_name: tobaco_web
+    restart: unless-stopped
+    ports:
+      - 3100:3000
+
+networks:
+  default:
+    name: master-net
+    external: true
